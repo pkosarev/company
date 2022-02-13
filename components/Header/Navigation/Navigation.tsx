@@ -23,7 +23,7 @@ const Navigation = (): JSX.Element => {
         <StyledMenu>
         <StyledMenuList>
             <StyledMenuItem>
-                <NavLink href={'/'}>Главная</NavLink>
+                <NavLink active={true} href={'/'}>Главная</NavLink>
             </StyledMenuItem>
             <StyledMenuItem>
                 <NavLink href={'/'}>Продукты и Услуги</NavLink>

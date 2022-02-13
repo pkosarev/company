@@ -62,8 +62,8 @@ const StyledMainBlockText = styled.div `
 `
 
 const StyledBg = styled.div `
-    position: absolute;
-    top: 0;
+    position: relative;
+    top: -825.5px;
     left: 880px;
     width: 960px;
     height: 800px;

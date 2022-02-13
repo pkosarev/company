@@ -3,6 +3,7 @@ import styled from "styled-components";
 import About from "../components/About/About";
 import Header from "../components/Header/Header";
 import Main from "../components/Main/Main";
+import Transport from "../components/Transport/Transport";
 
 const StyledWrapper = styled.div `
   max-width: 1760px;
@@ -17,6 +18,7 @@ export default function Home(): JSX.Element {
         <Header />
         <Main />
         <About />
+        <Transport/>
       </StyledWrapper>
   );
 }

@@ -4,21 +4,23 @@ import styled from '@emotion/styled';
 type Props = {
     children: string;
     href: string;
+    active?: boolean;
 }
 
-const UnActiveLink = styled.a `
+const StyledLink = styled.a<{ isActive?: boolean }> `
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--white);
-    opacity: 0.4;
     &:hover {text-decoration: underline;}
+    opacity: ${({ isActive }) => isActive ? 1 : 0.4};
 `
 
 const NavLink = (props: Props): JSX.Element => {
-    return (
-        <UnActiveLink href={props.href}>{props.children}</UnActiveLink>
+    return (<>
+        <StyledLink isActive={props.active} href={props.href}>{props.children}</StyledLink>
+        </>
     )
 }
 
