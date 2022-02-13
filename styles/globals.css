@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/public/fonts/gilroy-regular.woff2') format('woff2'),
+  url('/public/fonts/gilroy-black.woff2') format('woff2'),
+  url('/public/fonts/gilroy-bold.woff2') format('woff2'),
+  url('/public/fonts/gilroy-extrabolditalic.woff2') format('woff2'),
+  url('/public/fonts/gilroy-heavy.woff2') format('woff2'),
+  url('/public/fonts/gilroy-medium.woff2') format('woff2'),
+  url('/public/fonts/gilroy-semibold.woff2') format('woff2');
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  background-color: #E5E5E5;
+
+  font-family: 'Gilroy';
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+:root {
+  --white: #F6F6F6;
+  --primary: #000;
+  --light-black: #101010;
+  --gray: #D6D6D6;
+  --blue: #5551F7;
+  --font-family: 'Gilroy';
+}
