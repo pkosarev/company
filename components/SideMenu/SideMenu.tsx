@@ -53,7 +53,7 @@ const ScrollDown = styled.div `
     &::after {content:''}
 `
 const ArrowUpContainer = styled.div `
-    margin-top: 1730px;
+    margin-top: 1630px;
 `
 
 const ArrowDownContainer = styled.div `
