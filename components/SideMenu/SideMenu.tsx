@@ -52,6 +52,14 @@ const ScrollDown = styled.div `
 
     &::after {content:''}
 `
+const ArrowUpContainer = styled.div `
+    margin-top: 1730px;
+`
+
+const ArrowDownContainer = styled.div `
+    margin-top: 70px;
+    transform: rotate(180deg);
+`
 
 const SideMenu = (): JSX.Element => {
     return (
@@ -63,6 +71,12 @@ const SideMenu = (): JSX.Element => {
             <SideBarContainer>
                 <Menu>Меню</Menu>
                 <ScrollDown>Листайте вниз</ScrollDown>
+                <ArrowDownContainer>
+                    <Image src='/arrow-up.svg' width={48.81} height={48.71} alt='стрелка'/>
+                </ArrowDownContainer>
+                <ArrowUpContainer>
+                    <Image src='/arrow-up.svg' width={48.81} height={48.71} alt='стрелка'/>
+                </ArrowUpContainer>
             </SideBarContainer>
         </SideNav>
         </>
