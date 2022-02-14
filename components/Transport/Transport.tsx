@@ -31,8 +31,9 @@ const AutotransportSection = styled.div `
     padding-left: 132px;
     height: 310px;
     width: 960px;
-    background-color: #E5E5E5;
     cursor: pointer;
+
+    &:hover{background-color: #E5E5E5;}
 `
 
 const AutotransportList = styled.ul `
@@ -52,8 +53,14 @@ const StyledTitle = styled.h3 `
 `
 
 const TrainSection = styled.div `
-    margin-top: 74px;
     cursor: pointer;
+    margin-left: -132px;
+    padding-left: 132px;
+    padding-top: 90px;
+    height: 310px;
+    width: 960px;
+
+    &:hover{background-color: #E5E5E5;}
 `
 
 const TrainText = styled.div `
