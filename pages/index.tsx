@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import About from "../components/About/About";
-import Header from "../components/Header/Header";
-import Main from "../components/Main/Main";
-import Transport from "../components/Transport/Transport";
+import About from "./components/About/About";
+import Header from "./components/Header/Header";
+import Main from "./components/Main/Main";
+import Transport from "./components/Transport/Transport";
 
 const StyledContainer = styled.div `
   max-width: 1760px;
