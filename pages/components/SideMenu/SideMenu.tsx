@@ -3,8 +3,11 @@ import styled from "@emotion/styled";
 import Image from "next/image";
 
 const SideNav = styled.div `
+    position: absolute;
+    top:0;
+    left: 1840px;
     height: 2658px;
-    max-width: 45%;
+    max-width: 80px;
     background-color: var(--gray);
     padding-top: 20px;
 `

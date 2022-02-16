@@ -1,8 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 import Image from "next/image";
-import bg from '../../public/tanks2.jpg';
-import SideMenu from "../SideMenu/SideMenu";
+import bg from '../../../public/tanks2.jpg';
 
 const StyledTitle = styled.h1 `
     margin-top: 20px;
@@ -16,7 +15,6 @@ const StyledTitle = styled.h1 `
 const StyledMainBlock = styled.div `
     display:flex;
     align-items: top;
-    justify-content: space-around;
 `
 
 const StyledBreadcrumbs = styled.div `
@@ -44,10 +42,10 @@ const Border = styled.div `
 const StyledMainBlockBody = styled.div `
     margin-left: -80px;
     padding: 140px 0 0 0;
-    width: 45%;
+    max-width: 880px;
     height: 800px;
     background: var(--blue);
-    flex: 0 0 45%;
+    flex: 0 0 50%;
 `
 
 const StyledMainBlockText = styled.div `
@@ -62,10 +60,9 @@ const StyledMainBlockText = styled.div `
 `
 
 const StyledBg = styled.div `
-    max-width: 45%;
+    max-width: 960px;
     height: 800px;
     filter: brightness(60%);
-    flex: 0 0 45%;
 `
 
 const Main = (): JSX.Element => {
@@ -92,7 +89,6 @@ const Main = (): JSX.Element => {
                     quality={100}
                 />
             </StyledBg>
-            <SideMenu/>
       </StyledMainBlock>
   )
 }

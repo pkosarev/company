@@ -20,7 +20,6 @@ const StyledTransportContainer = styled.div `
 `
 
 const StyledWrapper = styled.div `
-    flex: 0 0 40%;
     display: flex;
     flex-direction: column;
 `
@@ -70,14 +69,19 @@ const TrainText = styled.div `
     line-height: 180%;
 `
 
-
 const Transport = (): JSX.Element => {
     return (
         <>
         <StyledTransportTitle>Транспорт</StyledTransportTitle>
 
         <StyledTransportContainer>
-            <Image src='/truck.jpg' width={880} height={620} alt='грузовик'/>
+            <Image
+            src='/truck.jpg'
+            width={880}
+            height={620}
+            alt='грузовик'
+            objectFit="cover"
+            quality={100}/>
             <StyledWrapper>
             <AutotransportSection>
                 <StyledTitle>Автотранспорт</StyledTitle>
