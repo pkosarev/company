@@ -2,6 +2,7 @@ import React from "react";
 import styled from 'styled-components';
 import Image from "next/image";
 import bg from '../../public/tanks2.jpg';
+import SideMenu from "../SideMenu/SideMenu";
 
 const StyledTitle = styled.h1 `
     margin-top: 20px;
@@ -13,7 +14,9 @@ const StyledTitle = styled.h1 `
     color: var(--white);
 `
 const StyledMainBlock = styled.div `
-    position: relative;
+    display:flex;
+    align-items: top;
+    justify-content: space-around;
 `
 
 const StyledBreadcrumbs = styled.div `
@@ -39,21 +42,18 @@ const Border = styled.div `
 `
 
 const StyledMainBlockBody = styled.div `
+    margin-left: -80px;
     padding: 140px 0 0 0;
-    position: relative;
-    left: -80px;
-
-    z-index: 2;
-    max-width: 880px;
+    width: 45%;
     height: 800px;
-
     background: var(--blue);
+    flex: 0 0 50%;
 `
 
 const StyledMainBlockText = styled.div `
     margin-top: 48px;
     margin-left: 80px;
-    padding-bottom: 78px;
+
     font-weight: 300;
     font-size: 25px;
     line-height: 160%;
@@ -62,10 +62,7 @@ const StyledMainBlockText = styled.div `
 `
 
 const StyledBg = styled.div `
-    position: relative;
-    top: -825.5px;
-    left: 880px;
-    width: 960px;
+    max-width: 45%;
     height: 800px;
     filter: brightness(60%);
 `
@@ -83,6 +80,7 @@ const Main = (): JSX.Element => {
                 <StyledTitle>Компания</StyledTitle>
               </Border>
             <StyledMainBlockText>Основная сфера деятельности «ПензГидромаш» — <br/> создание систем для нефтяной, газовой, химической<br/> и нефтехимической сфер промышленности.</StyledMainBlockText>
+            </StyledMainBlockBody>
             <StyledBg>
                 <Image
                     src={bg}
@@ -93,7 +91,7 @@ const Main = (): JSX.Element => {
                     quality={100}
                 />
             </StyledBg>
-          </StyledMainBlockBody>
+            <SideMenu/>
       </StyledMainBlock>
   )
 }

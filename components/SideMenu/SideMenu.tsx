@@ -4,11 +4,7 @@ import Image from "next/image";
 
 const SideNav = styled.div `
     height: 2658px;
-    width: 80px;
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 1840px;
+    max-width: 45%;
     background-color: var(--gray);
     padding-top: 20px;
 `

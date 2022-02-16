@@ -4,7 +4,6 @@ import About from "../components/About/About";
 import Header from "../components/Header/Header";
 import Main from "../components/Main/Main";
 import Transport from "../components/Transport/Transport";
-import SideMenu from "../components/SideMenu/SideMenu";
 
 const StyledContainer = styled.div `
   max-width: 1760px;
@@ -25,7 +24,6 @@ export default function Home(): JSX.Element {
     <StyledWrapper>
         <StyledContainer>
           <Header />
-          <SideMenu/>
           <Main />
           <About />
           <Transport/>
