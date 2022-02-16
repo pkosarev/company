@@ -47,7 +47,7 @@ const StyledMainBlockBody = styled.div `
     width: 45%;
     height: 800px;
     background: var(--blue);
-    flex: 0 0 50%;
+    flex: 0 0 45%;
 `
 
 const StyledMainBlockText = styled.div `
@@ -65,6 +65,7 @@ const StyledBg = styled.div `
     max-width: 45%;
     height: 800px;
     filter: brightness(60%);
+    flex: 0 0 45%;
 `
 
 const Main = (): JSX.Element => {
