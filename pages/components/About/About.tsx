@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 const StyledAboutContainer = styled.div `
     display: flex;

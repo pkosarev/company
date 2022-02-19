@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import About from "./components/About/About";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";

@@ -1,5 +1,5 @@
-import React from "react";
-import styled from 'styled-components';
+import React, { useState } from "react";
+import styled from "@emotion/styled";
 import Image from "next/image";
 
 const StyledTransportTitle = styled.h2 `
@@ -24,7 +24,7 @@ const StyledWrapper = styled.div `
     flex-direction: column;
 `
 
-const AutotransportSection = styled.div `
+const TransportInfo = styled.div `
     padding-top: 90px;
     margin-left: -132px;
     padding-left: 132px;
@@ -33,16 +33,6 @@ const AutotransportSection = styled.div `
     cursor: pointer;
 
     &:hover{background-color: #E5E5E5;}
-`
-
-const AutotransportList = styled.ul `
-    margin-top: 19px;
-`
-
-const AutoTransportItem = styled.li `
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 180%;
 `
 
 const StyledTitle = styled.h3 `
@@ -51,50 +41,63 @@ const StyledTitle = styled.h3 `
     line-height: 160%;
 `
 
-const TrainSection = styled.div `
-    cursor: pointer;
-    margin-left: -132px;
-    padding-left: 132px;
-    padding-top: 90px;
-    height: 310px;
-    width: 960px;
-
-    &:hover{background-color: #E5E5E5;}
-`
-
-const TrainText = styled.div `
+const StyledText = styled.div `
     margin-top: 19px;
     font-weight: 300;
     font-size: 18px;
     line-height: 180%;
 `
 
+const AutoImage = () => {
+return <Image
+    src='/truck.jpg'
+    width={880}
+    height={620}
+    alt='грузовик'
+    objectFit="cover"
+    quality={100}/>
+}
+
+const TrainImage = () => {
+    return <Image
+    src='/tanks.jpg'
+    width={880}
+    height={620}
+    alt='грузовик'
+    objectFit="cover"
+    quality={100}/>
+}
+
+
 const Transport = (): JSX.Element => {
+    const [imageType, setImageType] = useState('auto')
+    const images: {[key: string]: () => JSX.Element} = {
+        auto: AutoImage,
+        train: TrainImage
+    }
+    const TransportImage = images[imageType];
+
+    const hoverHandler = (type: string) => {
+      setImageType(type);
+    }
+
     return (
         <>
         <StyledTransportTitle>Транспорт</StyledTransportTitle>
 
         <StyledTransportContainer>
-            <Image
-            src='/truck.jpg'
-            width={880}
-            height={620}
-            alt='грузовик'
-            objectFit="cover"
-            quality={100}/>
+            <TransportImage/>
             <StyledWrapper>
-            <AutotransportSection>
+            <TransportInfo onMouseEnter={() => hoverHandler('auto')}>
                 <StyledTitle>Автотранспорт</StyledTitle>
-                <AutotransportList>
-                    <AutoTransportItem>— Собственная автотранспортная компания</AutoTransportItem>
-                    <AutoTransportItem>— Перевозка негабаритных и тяжеловесных грузов</AutoTransportItem>
-                    <AutoTransportItem>— Доставка в любую точку России</AutoTransportItem>
-                </AutotransportList>
-            </AutotransportSection>
-            <TrainSection>
+                    <StyledText>— Собственная автотранспортная компания</StyledText>
+                    <StyledText>— Перевозка негабаритных и тяжеловесных грузов</StyledText>
+                    <StyledText>— Доставка в любую точку России</StyledText>
+            </TransportInfo>
+            <TransportInfo onMouseEnter={() => hoverHandler('train')}>
                 <StyledTitle>Железнодорожный<br/> транспорт</StyledTitle>
-                <TrainText>На заводе имеется ж/д ветка, заходящая в производственное здание</TrainText>
-            </TrainSection>
+                <StyledText>На заводе имеется ж/д ветка, заходящая в производственное здание</StyledText>
+            </TransportInfo>
             </StyledWrapper>
         </StyledTransportContainer>
         </>
