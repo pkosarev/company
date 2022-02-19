@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
 import Image from "next/image";
+import { onTableWidth } from "../../../styles/breakpoint.css";
+import Container from "../Container/Container";
 
 const StyledTransportTitle = styled.h2 `
     margin-top: 136px;
@@ -11,6 +13,12 @@ const StyledTransportTitle = styled.h2 `
     font-size: 47px;
     line-height: 150%;
     color: var(--primary);
+
+    ${onTableWidth} {
+        font-size: 25px;
+        line-height: 160%;
+        margin-left: 31px;
+    }
 `
 
 const StyledTransportContainer = styled.div `
@@ -33,6 +41,10 @@ const TransportInfo = styled.div `
     cursor: pointer;
 
     &:hover{background-color: #E5E5E5;}
+
+    ${onTableWidth} {
+        margin-left: 0px;
+    }
 `
 
 const StyledTitle = styled.h3 `
@@ -83,21 +95,22 @@ const Transport = (): JSX.Element => {
 
     return (
         <>
-        <StyledTransportTitle>Транспорт</StyledTransportTitle>
-
+        <Container>
+            <StyledTransportTitle>Транспорт</StyledTransportTitle>
+        </Container>
         <StyledTransportContainer>
             <TransportImage/>
             <StyledWrapper>
-            <TransportInfo onMouseEnter={() => hoverHandler('auto')}>
-                <StyledTitle>Автотранспорт</StyledTitle>
-                    <StyledText>— Собственная автотранспортная компания</StyledText>
-                    <StyledText>— Перевозка негабаритных и тяжеловесных грузов</StyledText>
-                    <StyledText>— Доставка в любую точку России</StyledText>
-            </TransportInfo>
-            <TransportInfo onMouseEnter={() => hoverHandler('train')}>
-                <StyledTitle>Железнодорожный<br/> транспорт</StyledTitle>
-                <StyledText>На заводе имеется ж/д ветка, заходящая в производственное здание</StyledText>
-            </TransportInfo>
+                <TransportInfo onMouseEnter={() => hoverHandler('auto')}>
+                    <StyledTitle>Автотранспорт</StyledTitle>
+                        <StyledText>— Собственная автотранспортная компания</StyledText>
+                        <StyledText>— Перевозка негабаритных и тяжеловесных грузов</StyledText>
+                        <StyledText>— Доставка в любую точку России</StyledText>
+                </TransportInfo>
+                <TransportInfo onMouseEnter={() => hoverHandler('train')}>
+                    <StyledTitle>Железнодорожный<br/> транспорт</StyledTitle>
+                    <StyledText>На заводе имеется ж/д ветка, заходящая в производственное здание</StyledText>
+                </TransportInfo>
             </StyledWrapper>
         </StyledTransportContainer>
         </>

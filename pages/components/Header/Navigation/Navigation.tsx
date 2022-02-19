@@ -1,12 +1,18 @@
 import React from "react";
 import styled from "@emotion/styled";
 import NavLink from "./Link/NavLink";
+import { onSDesctopWidth } from "../../../../styles/breakpoint.css";
 
 const StyledHeaderMenu = styled.nav `
-    margin: 0 0 0 691px;
+    margin: 0 0 0 auto;
+
 `
 const StyledMenu = styled(StyledHeaderMenu) `
     padding: 5px 0;
+
+    ${onSDesctopWidth} {
+        display: none;
+    }
 `
 
 const StyledMenuList = styled.ul `
@@ -15,7 +21,7 @@ const StyledMenuList = styled.ul `
 `
 
 const StyledMenuItem = styled.li `
-    &:not(:last-child) {margin: 0 80px 0 0;}
+    margin: 0 80px 0 0;
 `
 
 const Navigation = (): JSX.Element => {

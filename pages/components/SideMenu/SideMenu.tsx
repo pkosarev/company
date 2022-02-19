@@ -1,17 +1,20 @@
 import React from "react";
 import styled from "@emotion/styled";
-import Image from "next/image";
+import ArrowUp from '../../../public/arrow-up.svg';
+import Hamburger from '../../../public/Union.svg';
+import { onSDesctopWidth } from "../../../styles/breakpoint.css";
 
 const SideNav = styled.div `
-    position: absolute;
-    top:0;
-    left: 1840px;
-    height: 2658px;
-    max-width: 80px;
+    width: 80px;
     background-color: var(--gray);
     padding-top: 20px;
+
+    ${onSDesctopWidth} {
+        display: none;
+    }
 `
 const Menu = styled.div `
+    margin-top: 20px;
     font-size: 14px;
     line-height: 16px;
     text-align: right;
@@ -23,8 +26,13 @@ const Menu = styled.div `
 `
 
 const StyledWrapper = styled.div `
-    text-align: center;
-    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 44px;
+`
+
+const StyledHamburger = styled(Hamburger) `
     margin-bottom: 20px;
 `
 
@@ -33,6 +41,7 @@ const SideBarContainer = styled.div `
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+    height: 100%;
 `
 
 const ScrollDown = styled.div `
@@ -48,37 +57,33 @@ const ScrollDown = styled.div `
     color: #1C1C1C;
 
     transform: rotate(90deg);
-
-    &::after {content:''}
-`
-const ArrowUpContainer = styled.div `
-    margin-top: 1630px;
 `
 
-const ArrowDownContainer = styled.div `
+const StyledArrowDown = styled(ArrowUp) `
+    display: block;
     margin-top: 70px;
     transform: rotate(180deg);
 `
 
+const StyledArrowUp = styled(ArrowUp)`
+    display: block;
+    margin-top: auto;
+    margin-bottom: 10px;
+`
+
 const SideMenu = (): JSX.Element => {
     return (
-        <>
         <SideNav>
-            <StyledWrapper>
-                <Image src="/Union.svg" width={30} height={12} alt='меню'/>
-            </StyledWrapper>
             <SideBarContainer>
-                <Menu>Меню</Menu>
+                <StyledWrapper>
+                    <StyledHamburger/>
+                    <Menu>Меню</Menu>
+                </StyledWrapper>
                 <ScrollDown>Листайте вниз</ScrollDown>
-                <ArrowDownContainer>
-                    <Image src='/arrow-up.svg' width={48.81} height={48.71} alt='стрелка'/>
-                </ArrowDownContainer>
-                <ArrowUpContainer>
-                    <Image src='/arrow-up.svg' width={48.81} height={48.71} alt='стрелка'/>
-                </ArrowUpContainer>
+                    <StyledArrowDown/>
+                    <StyledArrowUp/>
             </SideBarContainer>
         </SideNav>
-        </>
     )
 }
 
