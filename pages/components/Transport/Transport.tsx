@@ -50,6 +50,11 @@ const StyledTitle = styled.h3 `
     font-weight: 300;
     font-size: 25px;
     line-height: 160%;
+
+    ${onTableWidth} {
+        font-weight: normal;
+        font-size: 16px;
+    }
 `
 
 const StyledText = styled.div `
@@ -57,6 +62,10 @@ const StyledText = styled.div `
     font-weight: 300;
     font-size: 18px;
     line-height: 180%;
+
+    ${onTableWidth} {
+        font-size: 14px;
+    }
 `
 
 const AutoImage = () => {
