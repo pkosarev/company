@@ -33,7 +33,7 @@ const StyledWrapper = styled.div `
 `
 
 const TransportInfo = styled.div `
-    padding-top: 90px;
+    padding-top: 80px;
     margin-left: -132px;
     padding-left: 132px;
     height: 310px;

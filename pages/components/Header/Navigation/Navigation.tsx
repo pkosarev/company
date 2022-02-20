@@ -22,6 +22,10 @@ const StyledMenuList = styled.ul `
 
 const StyledMenuItem = styled.li `
     margin: 0 80px 0 0;
+
+    ${onSDesctopWidth} {
+        margin: 0 10px 0 0;
+    }
 `
 
 const Navigation = (): JSX.Element => {

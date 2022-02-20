@@ -18,7 +18,7 @@ const StyledTitle = styled.h1 `
         font-size: 40px;
         line-height: 120%;
 
-        padding-bottom: 30px;
+        margin-bottom: 30px;
     }
 `
 
@@ -41,7 +41,7 @@ const StyledBreadcrumbs = styled.div `
     margin-top: 236px;
 
     ${onTableWidth} {
-        margin-top: 67px;
+        margin-top: 116px;
     }
 `
 
@@ -55,7 +55,6 @@ const StyleBreadcrumbsLink = styled.a `
     &:hover {text-decoration: underline; cursor: pointer;}
 
     ${onTableWidth} {
-        font-weight: 300;
         font-size: 12px;
         line-height: 160%;
     }
@@ -65,8 +64,6 @@ const StyledArrow = styled.div `
 `
 
 const StyledMainBlockText = styled.div `
-    margin-top: 48px;
-
     font-weight: 300;
     font-size: 25px;
     line-height: 160%;
@@ -82,7 +79,11 @@ const StyledMainBlockText = styled.div `
 `
 
 const StyledBorder = styled.div `
+    margin-bottom: 48px;
     border-top: 1px solid var(--white);
+    ${onTableWidth} {
+        border-top: none;
+    }
 `
 
 const StyledBg = styled.div`

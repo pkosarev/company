@@ -69,8 +69,7 @@ const TextContainer = styled.div `
     padding-left: 70px;
 
     ${onTableWidth} {
-        padding-left: 0;
-        margin-left: 29px;
+        padding-left: 10px;
     }
 `
 
