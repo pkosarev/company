@@ -24,7 +24,6 @@ const StyledTransportTitle = styled.h2 `
 const StyledTransportContainer = styled.div `
     display: flex;
     justify-content: space-between;
-    margin-left: -80px;
 `
 
 const StyledWrapper = styled.div `
