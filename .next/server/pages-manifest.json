@@ -1,5 +1,15 @@
 {
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/_error": "pages/_error.js"
+  "/components/About/About": "pages/components/About/About.html",
+  "/components/Container/Container": "pages/components/Container/Container.html",
+  "/components/Header/Header": "pages/components/Header/Header.html",
+  "/components/Header/Navigation/Link/NavLink": "pages/components/Header/Navigation/Link/NavLink.html",
+  "/components/Header/Navigation/Navigation": "pages/components/Header/Navigation/Navigation.html",
+  "/components/Main/Main": "pages/components/Main/Main.html",
+  "/components/SideMenu/SideMenu": "pages/components/SideMenu/SideMenu.html",
+  "/components/Transport/Transport": "pages/components/Transport/Transport.html",
+  "/": "pages/index.html",
+  "/_error": "pages/_error.js",
+  "/404": "pages/404.html"
 }
