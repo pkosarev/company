@@ -6,13 +6,6 @@ import Main from "./components/Main/Main";
 import Transport from "./components/Transport/Transport";
 import SideMenu from "./components/SideMenu/SideMenu";
 
-// const StyledContainer = styled.div `
-//   position: relative;
-//   max-width: 1760px;
-//   margin: 0 auto;
-//   box-sizing: content-box;
-// `
-
 const StyledWrapper = styled.div `
   position: relative;
   min-height: 100%;
