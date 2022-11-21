@@ -24,7 +24,7 @@ body {
   line-height: 1;
   background-color: var(--white);
 
-  font-family: 'Gilroy';
+  font-family: var(--font-family);
 }
 
 a {
