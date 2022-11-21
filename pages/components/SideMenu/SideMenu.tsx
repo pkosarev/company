@@ -2,14 +2,14 @@ import React from "react";
 import styled from "@emotion/styled";
 import ArrowUp from '../../../public/arrow-up.svg';
 import Hamburger from '../../../public/Union.svg';
-import { onSDesctopWidth } from "../../../styles/breakpoint.css";
+import { onSDesktopWidth } from "../../../styles/breakpoint.css";
 
 const SideNav = styled.div `
     width: 80px;
     background-color: var(--gray);
     padding-top: 20px;
 
-    ${onSDesctopWidth} {
+    ${onSDesktopWidth} {
         display: none;
     }
 `
