@@ -36,7 +36,7 @@ const Header = (): JSX.Element => {
             <StyledHeader>
         <Container>
                 <StyledHeaderContainer>
-                    <StyledImage src='/logo.png' width={39} height={38} alt="Логотип" />
+                    <StyledImage src='/logo.png' width={39} height={38} alt="ПензГидроМаш" />
                     <StyledName>
                         ПензГидроМаш
                     </StyledName>
