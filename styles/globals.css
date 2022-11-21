@@ -1,12 +1,19 @@
 @font-face {
-  font-family: 'Gilroy';
-  src: url('../public/fonts/gilroy-regular.woff2') format('woff2'),
-  url('../public/fonts/gilroy-black.woff2') format('woff2'),
-  url('../public/fonts/gilroy-bold.woff2') format('woff2'),
-  url('../public/fonts/gilroy-extrabolditalic.woff2') format('woff2'),
-  url('../public/fonts/gilroy-heavy.woff2') format('woff2'),
-  url('../public/fonts/gilroy-medium.woff2') format('woff2'),
-  url('../public/fonts/gilroy-semibold.woff2') format('woff2');
+  font-family: var(--font-family);
+  font-weight: 300;
+  src: url('../public/fonts/gilroy-ultralight.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: var(--font-family);
+  font-weight: 400;
+  src: url('../public/fonts/gilroy-medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: var(--font-family);
+  font-weight: 500;
+  src: url('../public/fonts/gilroy-regular.woff2') format('woff2');
 }
 
 *,
@@ -24,7 +31,7 @@ body {
   line-height: 1;
   background-color: var(--white);
 
-  font-family: var(--font-family);
+  font-family: var(--font-family), sans-serif;
 }
 
 a {
