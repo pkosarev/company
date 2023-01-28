@@ -20,7 +20,7 @@ const Menu = styled.div `
     text-align: right;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #1C1C1C;
+    color: var(--sidemenu-black);
 
     transform: rotate(90deg);
 `
@@ -54,7 +54,7 @@ const ScrollDown = styled.div `
     letter-spacing: 0.1em;
     text-transform: uppercase;
 
-    color: #1C1C1C;
+    color: var(--sidemenu-black);
 
     transform: rotate(90deg);
 `
